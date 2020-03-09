@@ -17,7 +17,7 @@ randomLetter();
 console.log(emptyLetter);
 var letter = new Letter(emptyLetter);
 
-console.log(letter.name);d
+console.log(letter.name);
 
 //letter constructor
 function Letter(name) {
@@ -29,11 +29,11 @@ function Letter(name) {
 
 inquirer
     .prompt([{
-        name: letter,
+        name: "letter",
         message: "? Guess a letter!",
-        type: "letter"
+        type: "string"
     }]).then(function (answer) {
-        if (answer.name == letter) {
+        if (answer.letter == letter.name) {
             console.log(answer.name);
 
             console.log("Correct!!!")
