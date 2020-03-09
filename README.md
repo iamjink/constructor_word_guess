@@ -5,7 +5,12 @@
 * word.js
 * index.js 
 
-in the terminal. 
+using node commands.
+
+### Requirements
+* npm inquirer package
+* npm prompt package
+
 
 
 

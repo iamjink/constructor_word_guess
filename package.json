@@ -1,0 +1,22 @@
+{
+  "name": "constructor_word_guess",
+  "version": "1.0.0",
+  "description": "* letter.js\r * word.js\r * index.js",
+  "main": "letter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamjink/constructor_word_guess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamjink/constructor_word_guess/issues"
+  },
+  "homepage": "https://github.com/iamjink/constructor_word_guess#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
