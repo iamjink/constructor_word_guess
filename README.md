@@ -1,6 +1,11 @@
-### Constructor Word Guess!
+## Constructor Word Guess!
 
-## You can run letter.js and word.js and index.js in the terminal. 
+### You can run 
+*letter.js
+*word.js
+*index.js 
+
+in the terminal. 
 
 
 
