@@ -1,5 +1,5 @@
-var inquirer = require("inquirer");
-var letter = require("./letter");
+// var inquirer = require("inquirer");
+var Letter = require("./letter.js");
 
 //Word constructor
 function Word(answer) {
