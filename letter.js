@@ -4,8 +4,9 @@ var inquirer = require("inquirer");
 
 var emptyLetter = "";
 
+//randomizing letter from the alphabet
 var randomLetter = function () {
-    
+
     var alphabet = "abcdefghijklmnopqrstuvwxyz";
 
     while (emptyLetter.length < 1) {
@@ -14,18 +15,17 @@ var randomLetter = function () {
 }
 
 randomLetter();
-console.log(emptyLetter);
+// console.log(emptyLetter);
+
+//storing random alphabet to new object
 var letter = new Letter(emptyLetter);
 
-console.log(letter.name);
+// console.log(letter.name);
 
 //letter constructor
 function Letter(name) {
     this.name = name;
 };
-
-
-
 
 inquirer
     .prompt([{
