@@ -1,9 +1,9 @@
 ## Constructor Word Guess!
 
 ### You can run 
-*letter.js
-*word.js
-*index.js 
+* letter.js
+* word.js
+* index.js 
 
 in the terminal. 
 
