@@ -3,6 +3,7 @@ var Word = require("./word.js");
 
 var letterChoices = "abcdefghijklmnopqrstuvwxyz";
 
+//word choices from capital cities of countries
 var wordChoices = [
     "taipei",
     "beijing",
@@ -41,15 +42,13 @@ var wordChoices = [
     "rome",
     "prague",
     "amsterdam"
-
-
 ]
 
 var randomizedIndex = Math.floor(Math.random() * wordChoices.length);
-var randomWord = wordChoices[randomizedIndex];
+var computerWord = wordChoices[randomizedIndex];
 
 //creates new object using Word constructor
-var wordtoGuess = new Word(randomWord);
+var guessWord = new Word(computerWord);
 
 var newWordrequired = false;
 
@@ -61,18 +60,19 @@ var guessesLeft = 10;
 function Game() {
     //if new word required is true, then create a new word object, and set new word required to false;
     if (newWordrequired) {
-        var randomizedIndex = Math.floor(Math.random() * wordChoices.length);
-        var randomWord = wordChoices[randomizedIndex];
-
+    
         //creates new object using Word constructor
-        var wordtoGuess = new Word(randomWord);
+        var guessWord = new Word(computerWord);
+        console.log(guessWord.letter);
 
         var newWordrequired = false;
     }
-    
-    var completedWord = [];
-    wordtoGuess.guessArray.forEach(check);
 
+    var completedWord = [];
+    //runs check function for each letter in the guess array
+    guessWord.guessArray.forEach(check);
+
+    //if completedWord array is empty, then run the inquirer prompt
     if (completedWord.includes(false)) {
         inquirer.prompt([{
             type: "input",
@@ -94,8 +94,8 @@ function Game() {
                     //check if guess is correct
 
                     var wordCheckArr = [];
-                    wordtoGuess.userGuess(input.guessInput);
-                    wordtoGuess.guessArray.forEach(checkWord);
+                    guessWord.userGuess(input.guessInput);
+                    guessWord.guessArray.forEach(checkWord);
 
                     if (wordCheckArr.join("") === completedWord.join("")) {
                         console.log("\n Wrong \n");
@@ -108,7 +108,7 @@ function Game() {
 
                     }
 
-                    wordtoGuess.print();
+                    guessWord.print();
 
                     console.log("letters guessed: " + wrongGuesses.join(" ") + "\n");
 
@@ -143,7 +143,6 @@ function restartGame() {
             message: "Would you like to:",
             choices: ["Play again", "Exit"],
             name: "restart"
-
         }
 
     ]).then(function (input) {

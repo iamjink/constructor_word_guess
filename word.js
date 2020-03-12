@@ -1,7 +1,7 @@
 // var inquirer = require("inquirer");
 var Letter = require("./letter.js");
 
-//Word constructor
+//Word constructor for computer word and user input
 function Word(answer) {
     this.guessArray = [];
 
@@ -10,6 +10,9 @@ function Word(answer) {
         var letter = new Letter(answer[i]);
         this.guessArray.push(letter);
     }
+
+    console.log(this.guessArray);
+    
     //logs user guess letters
     this.print = function () {
         for (let i = 0; i < guessArray.length; i++) {
@@ -17,7 +20,7 @@ function Word(answer) {
         }
     }
 
-    //checks to see if user guess is correct
+    //checks to see if user guess is correct from the letter this.guess constractor in letter.js
     this.userGuess = function (userInput) {
         for (let i = 0; i < guessArray.length; i++) {
             this.guessArray[i].guess(userInput)
